@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BAC8A4129DF7CC6008FA151 /* AggiePathfinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */; };
+		1BAC8A4329DF7CC6008FA151 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4229DF7CC6008FA151 /* ContentView.swift */; };
+		1BAC8A4529DF7CC6008FA151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */; };
+		1BAC8A4829DF7CC6008FA151 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4729DF7CC6008FA151 /* Preview Assets.xcassets */; };
+		1BAC8A5229DF7CC7008FA151 /* AggiePathfinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A5129DF7CC7008FA151 /* AggiePathfinderTests.swift */; };
+		1BAC8A5C29DF7CC7008FA151 /* AggiePathfinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A5B29DF7CC7008FA151 /* AggiePathfinderUITests.swift */; };
+		1BAC8A5E29DF7CC7008FA151 /* AggiePathfinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A5D29DF7CC7008FA151 /* AggiePathfinderUITestsLaunchTests.swift */; };
+		1BAC8A6B29DF8084008FA151 /* LocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A6A29DF8084008FA151 /* LocationScreen.swift */; };
+		1BAC8A6D29DF8492008FA151 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A6C29DF8492008FA151 /* LocationManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BAC8A4E29DF7CC7008FA151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BAC8A3529DF7CC6008FA151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BAC8A3C29DF7CC6008FA151;
+			remoteInfo = AggiePathfinder;
+		};
+		1BAC8A5829DF7CC7008FA151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BAC8A3529DF7CC6008FA151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BAC8A3C29DF7CC6008FA151;
+			remoteInfo = AggiePathfinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BAC8A3D29DF7CC6008FA151 /* AggiePathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AggiePathfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiePathfinderApp.swift; sourceTree = "<group>"; };
+		1BAC8A4229DF7CC6008FA151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BAC8A4729DF7CC6008FA151 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1BAC8A4D29DF7CC7008FA151 /* AggiePathfinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggiePathfinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BAC8A5129DF7CC7008FA151 /* AggiePathfinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiePathfinderTests.swift; sourceTree = "<group>"; };
+		1BAC8A5729DF7CC7008FA151 /* AggiePathfinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggiePathfinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BAC8A5B29DF7CC7008FA151 /* AggiePathfinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiePathfinderUITests.swift; sourceTree = "<group>"; };
+		1BAC8A5D29DF7CC7008FA151 /* AggiePathfinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiePathfinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1BAC8A6A29DF8084008FA151 /* LocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationScreen.swift; sourceTree = "<group>"; };
+		1BAC8A6C29DF8492008FA151 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BAC8A3A29DF7CC6008FA151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BAC8A4A29DF7CC7008FA151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BAC8A5429DF7CC7008FA151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BAC8A3429DF7CC6008FA151 = {
+			isa = PBXGroup;
+			children = (
+				1BAC8A3F29DF7CC6008FA151 /* AggiePathfinder */,
+				1BAC8A5029DF7CC7008FA151 /* AggiePathfinderTests */,
+				1BAC8A5A29DF7CC7008FA151 /* AggiePathfinderUITests */,
+				1BAC8A3E29DF7CC6008FA151 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BAC8A3E29DF7CC6008FA151 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC8A3D29DF7CC6008FA151 /* AggiePathfinder.app */,
+				1BAC8A4D29DF7CC7008FA151 /* AggiePathfinderTests.xctest */,
+				1BAC8A5729DF7CC7008FA151 /* AggiePathfinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BAC8A3F29DF7CC6008FA151 /* AggiePathfinder */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */,
+				1BAC8A4229DF7CC6008FA151 /* ContentView.swift */,
+				1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */,
+				1BAC8A6A29DF8084008FA151 /* LocationScreen.swift */,
+				1BAC8A6C29DF8492008FA151 /* LocationManager.swift */,
+				1BAC8A4629DF7CC6008FA151 /* Preview Content */,
+			);
+			path = AggiePathfinder;
+			sourceTree = "<group>";
+		};
+		1BAC8A4629DF7CC6008FA151 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC8A4729DF7CC6008FA151 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1BAC8A5029DF7CC7008FA151 /* AggiePathfinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC8A5129DF7CC7008FA151 /* AggiePathfinderTests.swift */,
+			);
+			path = AggiePathfinderTests;
+			sourceTree = "<group>";
+		};
+		1BAC8A5A29DF7CC7008FA151 /* AggiePathfinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC8A5B29DF7CC7008FA151 /* AggiePathfinderUITests.swift */,
+				1BAC8A5D29DF7CC7008FA151 /* AggiePathfinderUITestsLaunchTests.swift */,
+			);
+			path = AggiePathfinderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BAC8A3C29DF7CC6008FA151 /* AggiePathfinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BAC8A6129DF7CC7008FA151 /* Build configuration list for PBXNativeTarget "AggiePathfinder" */;
+			buildPhases = (
+				1BAC8A3929DF7CC6008FA151 /* Sources */,
+				1BAC8A3A29DF7CC6008FA151 /* Frameworks */,
+				1BAC8A3B29DF7CC6008FA151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AggiePathfinder;
+			productName = AggiePathfinder;
+			productReference = 1BAC8A3D29DF7CC6008FA151 /* AggiePathfinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BAC8A4C29DF7CC7008FA151 /* AggiePathfinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BAC8A6429DF7CC7008FA151 /* Build configuration list for PBXNativeTarget "AggiePathfinderTests" */;
+			buildPhases = (
+				1BAC8A4929DF7CC7008FA151 /* Sources */,
+				1BAC8A4A29DF7CC7008FA151 /* Frameworks */,
+				1BAC8A4B29DF7CC7008FA151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BAC8A4F29DF7CC7008FA151 /* PBXTargetDependency */,
+			);
+			name = AggiePathfinderTests;
+			productName = AggiePathfinderTests;
+			productReference = 1BAC8A4D29DF7CC7008FA151 /* AggiePathfinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BAC8A5629DF7CC7008FA151 /* AggiePathfinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BAC8A6729DF7CC7008FA151 /* Build configuration list for PBXNativeTarget "AggiePathfinderUITests" */;
+			buildPhases = (
+				1BAC8A5329DF7CC7008FA151 /* Sources */,
+				1BAC8A5429DF7CC7008FA151 /* Frameworks */,
+				1BAC8A5529DF7CC7008FA151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BAC8A5929DF7CC7008FA151 /* PBXTargetDependency */,
+			);
+			name = AggiePathfinderUITests;
+			productName = AggiePathfinderUITests;
+			productReference = 1BAC8A5729DF7CC7008FA151 /* AggiePathfinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BAC8A3529DF7CC6008FA151 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1BAC8A3C29DF7CC6008FA151 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					1BAC8A4C29DF7CC7008FA151 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 1BAC8A3C29DF7CC6008FA151;
+					};
+					1BAC8A5629DF7CC7008FA151 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 1BAC8A3C29DF7CC6008FA151;
+					};
+				};
+			};
+			buildConfigurationList = 1BAC8A3829DF7CC6008FA151 /* Build configuration list for PBXProject "AggiePathfinder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BAC8A3429DF7CC6008FA151;
+			productRefGroup = 1BAC8A3E29DF7CC6008FA151 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BAC8A3C29DF7CC6008FA151 /* AggiePathfinder */,
+				1BAC8A4C29DF7CC7008FA151 /* AggiePathfinderTests */,
+				1BAC8A5629DF7CC7008FA151 /* AggiePathfinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BAC8A3B29DF7CC6008FA151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BAC8A4829DF7CC6008FA151 /* Preview Assets.xcassets in Resources */,
+				1BAC8A4529DF7CC6008FA151 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BAC8A4B29DF7CC7008FA151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BAC8A5529DF7CC7008FA151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BAC8A3929DF7CC6008FA151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BAC8A6D29DF8492008FA151 /* LocationManager.swift in Sources */,
+				1BAC8A6B29DF8084008FA151 /* LocationScreen.swift in Sources */,
+				1BAC8A4329DF7CC6008FA151 /* ContentView.swift in Sources */,
+				1BAC8A4129DF7CC6008FA151 /* AggiePathfinderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BAC8A4929DF7CC7008FA151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BAC8A5229DF7CC7008FA151 /* AggiePathfinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BAC8A5329DF7CC7008FA151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BAC8A5C29DF7CC7008FA151 /* AggiePathfinderUITests.swift in Sources */,
+				1BAC8A5E29DF7CC7008FA151 /* AggiePathfinderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BAC8A4F29DF7CC7008FA151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BAC8A3C29DF7CC6008FA151 /* AggiePathfinder */;
+			targetProxy = 1BAC8A4E29DF7CC7008FA151 /* PBXContainerItemProxy */;
+		};
+		1BAC8A5929DF7CC7008FA151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BAC8A3C29DF7CC6008FA151 /* AggiePathfinder */;
+			targetProxy = 1BAC8A5829DF7CC7008FA151 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BAC8A5F29DF7CC7008FA151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1BAC8A6029DF7CC7008FA151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BAC8A6229DF7CC7008FA151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AggiePathfinder/Preview Content\"";
+				DEVELOPMENT_TEAM = KY3DU2D7QL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AggiePathfinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BAC8A6329DF7CC7008FA151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AggiePathfinder/Preview Content\"";
+				DEVELOPMENT_TEAM = KY3DU2D7QL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AggiePathfinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BAC8A6529DF7CC7008FA151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KY3DU2D7QL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AggiePathfinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AggiePathfinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AggiePathfinder";
+			};
+			name = Debug;
+		};
+		1BAC8A6629DF7CC7008FA151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KY3DU2D7QL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AggiePathfinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AggiePathfinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AggiePathfinder";
+			};
+			name = Release;
+		};
+		1BAC8A6829DF7CC7008FA151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KY3DU2D7QL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AggiePathfinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AggiePathfinder;
+			};
+			name = Debug;
+		};
+		1BAC8A6929DF7CC7008FA151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KY3DU2D7QL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AggiePathfinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AggiePathfinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BAC8A3829DF7CC6008FA151 /* Build configuration list for PBXProject "AggiePathfinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BAC8A5F29DF7CC7008FA151 /* Debug */,
+				1BAC8A6029DF7CC7008FA151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BAC8A6129DF7CC7008FA151 /* Build configuration list for PBXNativeTarget "AggiePathfinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BAC8A6229DF7CC7008FA151 /* Debug */,
+				1BAC8A6329DF7CC7008FA151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BAC8A6429DF7CC7008FA151 /* Build configuration list for PBXNativeTarget "AggiePathfinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BAC8A6529DF7CC7008FA151 /* Debug */,
+				1BAC8A6629DF7CC7008FA151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BAC8A6729DF7CC7008FA151 /* Build configuration list for PBXNativeTarget "AggiePathfinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BAC8A6829DF7CC7008FA151 /* Debug */,
+				1BAC8A6929DF7CC7008FA151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BAC8A3529DF7CC6008FA151 /* Project object */;
+}
