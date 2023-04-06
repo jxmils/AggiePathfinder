@@ -40,8 +40,38 @@ struct MapView: UIViewRepresentable {
     }
 }
 
+struct SearchBarContainer: View {
+    @Binding var myLocationSearchText: String
+    @Binding var destinationSearchText: String
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Text("My Location")
+                    .font(.headline)
+                Spacer()
+                TextField("Search", text: $myLocationSearchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
+            HStack {
+                Text("Destination")
+                    .font(.headline)
+                Spacer()
+                TextField("Search", text: $destinationSearchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
+        }
+        .padding()
+        .background(Color(red: 0.961, green: 0.957, blue: 0.922))
+        .cornerRadius(10)
+        .frame(height: UIScreen.main.bounds.height * 0.2)
+    }
+}
+
 struct LocationScreen: View {
     @StateObject private var locationManager = LocationManager()
+    @State private var myLocationSearchText: String = ""
+    @State private var destinationSearchText: String = ""
 
     var body: some View {
         ZStack {
@@ -49,10 +79,9 @@ struct LocationScreen: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                Spacer()
-
-                // Add other UI elements as needed
-
+                SearchBarContainer(myLocationSearchText: $myLocationSearchText, destinationSearchText: $destinationSearchText)
+                    .padding(.horizontal)
+                
                 Spacer()
             }
         }
