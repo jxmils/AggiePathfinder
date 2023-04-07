@@ -72,8 +72,7 @@ struct SearchBarContainer: View {
 
 struct LocationScreen: View {
     @StateObject private var locationManager = LocationManager()
-    @State private var myLocationSearchText: String = ""
-    @State private var destinationSearchText: String = ""
+    @State private var searchText: String = ""
 
     var body: some View {
         ZStack {
@@ -81,9 +80,18 @@ struct LocationScreen: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                SearchBarContainer(myLocationSearchText: $myLocationSearchText, destinationSearchText: $destinationSearchText)
-                    .padding(.horizontal)
-                
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                    TextField("Search for a location", text: $searchText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                .padding(.horizontal, 16)
+                .frame(height: 40)
+                .background(Color.white)
+                .cornerRadius(8)
+                .padding(.top, 16)
+                .padding(.horizontal)
+
                 Spacer()
             }
         }
