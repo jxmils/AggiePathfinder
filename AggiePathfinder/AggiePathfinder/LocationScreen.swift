@@ -47,8 +47,10 @@ struct SearchBarContainer: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Text("My Location")
+                Text("Location")
                     .font(.headline)
+                Spacer()
+                Spacer()
                 Spacer()
                 TextField("Search", text: $myLocationSearchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
