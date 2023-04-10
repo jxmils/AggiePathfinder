@@ -1,0 +1,4 @@
+Add data validation to be able to return addresses that could be
+taken as they are and put into a search engine to find out how to
+get there. (Not really sure what this means, need to talk to Neeko
+and Jason)
