@@ -18,11 +18,7 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                         .padding(.bottom, 32)
                     
-                    Image("GDSC")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                    
+            
                     Spacer()
                     
                     NavigationLink(destination: LocationScreen(), isActive: $isLocationScreenActive) {
