@@ -6,8 +6,8 @@ CREATE TABLE `Building` (
   `building_id` integer PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255),
   `address` varchar(255),
-  `lattitude` decimal,
-  `longitude` decimal
+  `latitude` decimal(9, 6),
+  `longitude` decimal(9, 6)
 );
 
 CREATE TABLE `Room` (
