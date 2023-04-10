@@ -2,6 +2,51 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+struct RecentLocationsSheet: View {
+    @Binding var showSheet: Bool
+    @State private var recentLocations = ["Location 1", "Location 2", "Location 3"]
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    showSheet = false
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.system(size: 24))
+                        .foregroundColor(.gray)
+                }
+                .frame(width: 44, height: 44)
+                .background(Color.white)
+                .cornerRadius(22)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+            }
+            .padding(.horizontal, 16)
+            .padding(.top, 16)
+            
+            Text("Recent Locations")
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding(.bottom, 8)
+            
+            List(recentLocations, id: \.self) { location in
+                Text(location)
+                    .font(.system(size: 18))
+                    .padding(.vertical, 4)
+                    .padding(.vertical, 4)
+            }
+        }
+        .padding(.horizontal)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemGroupedBackground))
+        .cornerRadius(16)
+        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+        .edgesIgnoringSafeArea(.all)
+    }
+}
+
+
 struct MapView: UIViewRepresentable {
     @ObservedObject var locationManager: LocationManager
     
@@ -40,37 +85,16 @@ struct MapView: UIViewRepresentable {
     }
 }
 
-struct SearchBarContainer: View {
-    @Binding var myLocationSearchText: String
-    @Binding var destinationSearchText: String
+struct SearchBar: View {
+    @Binding var searchText: String
+    var placeholder: String
     
     var body: some View {
-        ZStack {
-            Capsule()
-                .fill(Color(red: 0.961, green: 0.957, blue: 0.922))
-                .shadow(color: Color(red: 0.2, green: 0.2, blue: 0.2), radius: 8, x: 0, y: 4)
-            
-            VStack(alignment: .leading, spacing: 8) {
-                HStack {
-                    Text("Location")
-                        .font(.headline)
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    TextField("Search", text: $myLocationSearchText)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
-                HStack {
-                    Text("Destination")
-                        .font(.headline)
-                    Spacer()
-                    TextField("Search", text: $destinationSearchText)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
-            }
-            .padding()
-        }
-        .frame(height: UIScreen.main.bounds.height * 0.2)
+        TextField(placeholder, text: $searchText)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(Color(.systemGray6))
+            .cornerRadius(10)
     }
 }
 
@@ -78,7 +102,7 @@ struct LocationScreen: View {
     @StateObject private var locationManager = LocationManager()
     @State private var myLocationSearchText: String = ""
     @State private var destinationSearchText: String = ""
-    @State private var isSearching = false
+    @State private var showRecentLocationsSheet = false
     
     var body: some View {
         ZStack {
@@ -86,32 +110,44 @@ struct LocationScreen: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                NavigationLink(destination: SearchScreen(locationManager: locationManager, isSearching: $isSearching), isActive: $isSearching) {
+                VStack(spacing: 8) {
                     HStack {
-                        ZStack {
-                            Circle()
-                                .fill(Color.white)
-                                .frame(width: 32, height: 32)
-                                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.gray)
-                        }
-                        TextField("Search for a location", text: $myLocationSearchText)
-                            .padding(.leading, 8)
-                            .foregroundColor(.black)
+                        Image(systemName: "location.fill")
+                            .foregroundColor(.blue)
+                        SearchBar(searchText: $myLocationSearchText, placeholder: "Current Location")
                     }
-                    .padding(.horizontal, 16)
-                    .frame(height: 40)
-                    .background(Color.white)
-                    .cornerRadius(20)
-                    .padding(.top, 16)
-                    .padding(.horizontal)
+                    
+                    HStack {
+                        Image(systemName: "location.circle.fill")
+                            .foregroundColor(.red)
+                        SearchBar(searchText: $destinationSearchText, placeholder: "Destination")
+                    }
+                    
+                    Button(action: {
+                        showRecentLocationsSheet = true
+                    }) {
+                        HStack {
+                            Image(systemName: "clock.arrow.circlepath")
+                                .font(.system(size: 20))
+                            Text("Recent Locations")
+                                .font(.system(size: 18))
+                        }
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 8)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                    }
                 }
+                .padding(.top, 16)
+                .padding(.horizontal)
                 
                 Spacer()
             }
-            .opacity(isSearching ? 0 : 1)
-            .animation(.default)
+            
+            if showRecentLocationsSheet {
+                RecentLocationsSheet(showSheet: $showRecentLocationsSheet)
+            }
         }
     }
 }

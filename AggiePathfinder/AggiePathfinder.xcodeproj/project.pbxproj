@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B675BFE29DFE31D009B81C5 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B675BFD29DFE31D009B81C5 /* SearchScreen.swift */; };
 		1BAC8A4129DF7CC6008FA151 /* AggiePathfinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */; };
 		1BAC8A4329DF7CC6008FA151 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4229DF7CC6008FA151 /* ContentView.swift */; };
 		1BAC8A4529DF7CC6008FA151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B675BFD29DFE31D009B81C5 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		1BAC8A3D29DF7CC6008FA151 /* AggiePathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AggiePathfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiePathfinderApp.swift; sourceTree = "<group>"; };
 		1BAC8A4229DF7CC6008FA151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			children = (
 				1BAC8A4229DF7CC6008FA151 /* ContentView.swift */,
 				1BAC8A6A29DF8084008FA151 /* LocationScreen.swift */,
-				1B675BFD29DFE31D009B81C5 /* SearchScreen.swift */,
 				1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */,
 				1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */,
 				1BAC8A6C29DF8492008FA151 /* LocationManager.swift */,
@@ -267,7 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BAC8A6D29DF8492008FA151 /* LocationManager.swift in Sources */,
-				1B675BFE29DFE31D009B81C5 /* SearchScreen.swift in Sources */,
 				1BAC8A6B29DF8084008FA151 /* LocationScreen.swift in Sources */,
 				1BAC8A4329DF7CC6008FA151 /* ContentView.swift in Sources */,
 				1BAC8A4129DF7CC6008FA151 /* AggiePathfinderApp.swift in Sources */,
