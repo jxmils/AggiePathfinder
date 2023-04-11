@@ -19,14 +19,6 @@ CREATE TABLE `Room` (
   `capacity` integer
 );
 
-CREATE TABLE `Pathway` (
-  `pathway_id` int PRIMARY KEY AUTO_INCREMENT,
-  `start_building_id` int,
-  `end_building_id` int,
-  `distance` float,
-  `accessible` boolean
-);
-
 CREATE TABLE `Floor` (
   `floor_id` int PRIMARY KEY AUTO_INCREMENT,
   `building_id` int,
@@ -55,10 +47,6 @@ CREATE TABLE `entrance_exit` (
 ALTER TABLE `Room` ADD FOREIGN KEY (`building_id`) REFERENCES `Building` (`building_id`);
 
 ALTER TABLE `Room` ADD FOREIGN KEY (`floor_id`) REFERENCES `Floor` (`floor_id`);
-
-ALTER TABLE `Pathway` ADD FOREIGN KEY (`start_building_id`) REFERENCES `Building` (`building_id`);
-
-ALTER TABLE `Pathway` ADD FOREIGN KEY (`end_building_id`) REFERENCES `Building` (`building_id`);
 
 ALTER TABLE `Floor` ADD FOREIGN KEY (`building_id`) REFERENCES `Building` (`building_id`);
 
