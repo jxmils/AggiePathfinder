@@ -7,3 +7,4 @@
 
 ## Future features
 - Centralized place for events and happenings around campus
+- Add localized boundaries for university
