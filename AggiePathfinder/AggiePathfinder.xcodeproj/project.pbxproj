@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1BAC8A4129DF7CC6008FA151 /* AggiePathfinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */; };
-		1BAC8A4329DF7CC6008FA151 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4229DF7CC6008FA151 /* ContentView.swift */; };
 		1BAC8A4529DF7CC6008FA151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */; };
 		1BAC8A4829DF7CC6008FA151 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAC8A4729DF7CC6008FA151 /* Preview Assets.xcassets */; };
 		1BAC8A5229DF7CC7008FA151 /* AggiePathfinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC8A5129DF7CC7008FA151 /* AggiePathfinderTests.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		1BAC8A3D29DF7CC6008FA151 /* AggiePathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AggiePathfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiePathfinderApp.swift; sourceTree = "<group>"; };
-		1BAC8A4229DF7CC6008FA151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BAC8A4729DF7CC6008FA151 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BAC8A4D29DF7CC7008FA151 /* AggiePathfinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AggiePathfinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +96,6 @@
 		1BAC8A3F29DF7CC6008FA151 /* AggiePathfinder */ = {
 			isa = PBXGroup;
 			children = (
-				1BAC8A4229DF7CC6008FA151 /* ContentView.swift */,
 				1BAC8A6A29DF8084008FA151 /* LocationScreen.swift */,
 				1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */,
 				1BAC8A6C29DF8492008FA151 /* LocationManager.swift */,
@@ -265,7 +262,6 @@
 			files = (
 				1BAC8A6D29DF8492008FA151 /* LocationManager.swift in Sources */,
 				1BAC8A6B29DF8084008FA151 /* LocationScreen.swift in Sources */,
-				1BAC8A4329DF7CC6008FA151 /* ContentView.swift in Sources */,
 				1BAC8A4129DF7CC6008FA151 /* AggiePathfinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

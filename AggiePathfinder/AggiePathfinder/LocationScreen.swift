@@ -27,52 +27,6 @@ extension SearchResults: MKLocalSearchCompleterDelegate {
     }
 }
 
-struct RecentLocationsSheet: View {
-    @Binding var showSheet: Bool
-    @State private var recentLocations = ["Location 1", "Location 2", "Location 3"]
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    showSheet = false
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.system(size: 24))
-                        .foregroundColor(.gray)
-                }
-                .frame(width: 44, height: 44)
-                .background(Color.white)
-                .cornerRadius(22)
-                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                .padding(.top)
-            }
-            .padding(.horizontal, 16)
-            .padding(.top, 16)
-            
-            Text("Recent Locations")
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding(.bottom, 8)
-            
-            List(recentLocations, id: \.self) { location in
-                Text(location)
-                    .font(.system(size: 18))
-                    .padding(.vertical, 4)
-                    .padding(.vertical, 4)
-            }
-        }
-        .padding(.horizontal)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemGroupedBackground))
-        .cornerRadius(16)
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-        .edgesIgnoringSafeArea(.all)
-    }
-}
-
-
 struct MapView: UIViewRepresentable {
     @ObservedObject var locationManager: LocationManager
     @Binding var destinationAnnotation: MKPointAnnotation?
@@ -167,7 +121,7 @@ struct SearchBar: View {
         })
         .padding(.horizontal, 12)
         .padding(.vertical, 8)
-        .background(Color(.systemGray6))
+        .background(Color(red: 255/255, green: 247/255, blue: 233/255))
         .cornerRadius(10)
     }
 }
@@ -232,7 +186,7 @@ struct LocationScreen: View {
                                         .padding(.vertical, 4)
                                 }
                             }
-                            .background(Color(.systemGray6))
+                            .background(Color(red: 255/255, green: 247/255, blue: 233/255))
                         }
                     }
                 }
