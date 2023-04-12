@@ -101,8 +101,8 @@
 				1BAC8A4229DF7CC6008FA151 /* ContentView.swift */,
 				1BAC8A6A29DF8084008FA151 /* LocationScreen.swift */,
 				1BAC8A4029DF7CC6008FA151 /* AggiePathfinderApp.swift */,
-				1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */,
 				1BAC8A6C29DF8492008FA151 /* LocationManager.swift */,
+				1BAC8A4429DF7CC6008FA151 /* Assets.xcassets */,
 				1BAC8A4629DF7CC6008FA151 /* Preview Content */,
 			);
 			path = AggiePathfinder;

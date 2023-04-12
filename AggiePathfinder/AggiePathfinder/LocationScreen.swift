@@ -46,6 +46,7 @@ struct RecentLocationsSheet: View {
                 .background(Color.white)
                 .cornerRadius(22)
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                .padding(.top)
             }
             .padding(.horizontal, 16)
             .padding(.top, 16)
@@ -85,22 +86,22 @@ struct MapView: UIViewRepresentable {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         mapView.showsUserLocation = true
-        
+
         locationManager.requestLocation()
-        
-        if let userLocation = locationManager.location {
-            let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+
+        if let initialUserLocation = locationManager.initialUserLocation, !initialRegionSet {
+            let region = MKCoordinateRegion(center: initialUserLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
             mapView.setRegion(region, animated: true)
+            initialRegionSet = true
         }
-        
+
         return mapView
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
-        if let userLocation = locationManager.location, !initialRegionSet {
-            let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        if let initialUserLocation = locationManager.initialUserLocation, !context.coordinator.userMovedMap {
+            let region = MKCoordinateRegion(center: initialUserLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
             view.setRegion(region, animated: true)
-            initialRegionSet = true
         }
         
         // Remove existing destination annotations and routes
@@ -113,7 +114,7 @@ struct MapView: UIViewRepresentable {
             drawRoute(from: locationManager.location?.coordinate, to: destinationAnnotation.coordinate, on: view)
         }
     }
-    
+
     func drawRoute(from source: CLLocationCoordinate2D?, to destination: CLLocationCoordinate2D, on mapView: MKMapView) {
         guard let source = source else { return }
         
@@ -133,6 +134,7 @@ struct MapView: UIViewRepresentable {
     
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
+        var userMovedMap = false
         
         init(_ parent: MapView) {
             self.parent = parent
@@ -147,20 +149,26 @@ struct MapView: UIViewRepresentable {
             }
             return MKOverlayRenderer(overlay: overlay)
         }
+        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+            userMovedMap = true
+        }
+
     }
 }
 
-
 struct SearchBar: View {
     @Binding var searchText: String
+    @Binding var isFocused: Bool
     var placeholder: String
     
     var body: some View {
-        TextField(placeholder, text: $searchText)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background(Color(.systemGray6))
-            .cornerRadius(10)
+        TextField(placeholder, text: $searchText, onEditingChanged: { editing in
+            isFocused = editing
+        })
+        .padding(.horizontal, 12)
+        .padding(.vertical, 8)
+        .background(Color(.systemGray6))
+        .cornerRadius(10)
     }
 }
 
@@ -172,30 +180,31 @@ struct LocationScreen: View {
     @State private var showRecentLocationsSheet = false
     @State private var destinationAnnotation: MKPointAnnotation? = nil
     @State private var initialRegionSet = false
+    @State private var isSearchBarFocused = false
 
     
     var body: some View {
         ZStack {
-            MapView(locationManager: locationManager, destinationAnnotation: $destinationAnnotation, initialRegionSet: $initialRegionSet)
-                .edgesIgnoringSafeArea(.all)
+            if isSearchBarFocused {
+                Color(.systemGroupedBackground)
+                    .edgesIgnoringSafeArea(.all)
+            } else {
+                MapView(locationManager: locationManager, destinationAnnotation: $destinationAnnotation, initialRegionSet: $initialRegionSet)
+                    .edgesIgnoringSafeArea(.all)
+            }
 
             
             VStack {
                 VStack(spacing: 8) {
-                    HStack {
-                        Image(systemName: "location.fill")
-                            .foregroundColor(.blue)
-                        SearchBar(searchText: $myLocationSearchText, placeholder: "Current Location")
-                    }
-                    
                     VStack(spacing: 0) {
                         HStack {
                             Image(systemName: "location.circle.fill")
                                 .foregroundColor(.red)
-                            SearchBar(searchText: $destinationSearchText, placeholder: "Destination")
+                            SearchBar(searchText: $destinationSearchText, isFocused: $isSearchBarFocused, placeholder: "Destination")
                                 .onChange(of: destinationSearchText) { query in
                                     searchResults.search(query: query)
                                 }
+
                         }
                         
                         if !searchResults.completions.isEmpty {
@@ -249,15 +258,9 @@ struct LocationScreen: View {
                 Spacer()
             }
             
-            if showRecentLocationsSheet {
-                RecentLocationsSheet(showSheet: $showRecentLocationsSheet)
-            }
         }
     }
 }
-
-
-
 
 struct LocationScreen_Previews: PreviewProvider {
     static var previews: some View {

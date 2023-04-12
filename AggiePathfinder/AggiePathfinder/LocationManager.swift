@@ -11,6 +11,7 @@ import Combine
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var location: CLLocation?
+    @Published var initialUserLocation: CLLocation?
     
     private let locationManager = CLLocationManager()
     
@@ -29,5 +30,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.location = location
+
+        if initialUserLocation == nil {
+            initialUserLocation = location
+        }
     }
 }
