@@ -235,22 +235,6 @@ struct LocationScreen: View {
                             .background(Color(.systemGray6))
                         }
                     }
-                    
-                    Button(action: {
-                        showRecentLocationsSheet = true
-                    }) {
-                        HStack {
-                            Image(systemName: "clock.arrow.circlepath")
-                                .font(.system(size: 20))
-                            Text("Recent Locations")
-                                .font(.system(size: 18))
-                        }
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .background(Color(.systemBlue))
-                        .cornerRadius(10)
-                        .foregroundColor(.white)
-                    }
                 }
                 .padding(.top, 16)
                 .padding(.horizontal)
